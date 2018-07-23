@@ -1,0 +1,37 @@
+﻿<#+
+// <copyright file="Bbing_Toolbox.tt" company="">
+//  Copyright © chenyishi All Rights Reserved.
+// </copyright>
+
+public class Bbing_Toolbox_IService : CSharpTemplate
+{
+    private string _className;
+
+    public Bbing_Toolbox_IService(string className)
+    {
+        _className = className;
+    }
+
+	public override string TransformText()
+	{
+		base.TransformText();
+#>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Bbing.Domain.Model;
+
+namespace Bbing.Domain.Service
+{
+	public partial interface I<#= _className #>Service : IBaseService<<#= _className #>>
+	{
+
+	}
+}
+<#+
+        return this.GenerationEnvironment.ToString();
+	}
+}
+#>

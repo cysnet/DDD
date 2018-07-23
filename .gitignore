@@ -1,0 +1,16 @@
+Bbing.Config/bin/
+Bbing.Config/obj/
+Bbing.Domain/bin/
+Bbing.Domain/obj/
+Bbing.DtoModel/bin/
+Bbing.DtoModel/obj/
+Bbing.Infrastructure/bin/
+Bbing.Infrastructure/obj/
+Bbing.Repository/bin/
+Bbing.Repository/obj/
+Bbing.Service/bin/
+Bbing.Service/obj/
+Bbing.Test/obj/
+Bbing.WebApi/bin/
+Bbing.WebApi/obj/
+Bbing.WebApi/Pic/

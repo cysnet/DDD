@@ -1,0 +1,38 @@
+﻿<#+
+// <copyright file="Bbing_Template_Repository.tt" company="">
+//  Copyright © . All Rights Reserved.
+// </copyright>
+
+public class Bbing_Template_Mongo_Repository : CSharpTemplate
+{
+    private string _className;
+
+    public Bbing_Template_Mongo_Repository(string className)
+    {
+        _className = className;
+    }
+
+	public override string TransformText()
+	{
+		base.TransformText();
+#>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Bbing.Domain.IRepositories;
+using Bbing.Domain.Model;
+
+namespace Bbing.Repository.Repositories.Mongo
+{
+	public partial class <#= _className #>Repository : MongoBaseRepository<<#= _className #>>, I<#= _className #>Repository 
+	{
+		
+	}
+}
+<#+
+        return this.GenerationEnvironment.ToString();
+	}
+}
+#>

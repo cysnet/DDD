@@ -1,0 +1,37 @@
+﻿<#+
+// <copyright file="Bbing_Template_Repository.tt" company="">
+//  Copyright © . All Rights Reserved.
+// </copyright>
+
+public class Bbing_Template_Repository : CSharpTemplate
+{
+    private string _className;
+
+    public Bbing_Template_Repository(string className)
+    {
+        _className = className;
+    }
+
+	public override string TransformText()
+	{
+		base.TransformText();
+#>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Bbing.Domain.Model;
+
+namespace Bbing.Domain.IRepositories
+{
+	public partial interface I<#= _className #>Repository : IRepository<<#= _className #>>
+	{
+
+	}
+}
+<#+
+        return this.GenerationEnvironment.ToString();
+	}
+}
+#>
