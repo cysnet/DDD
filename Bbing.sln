@@ -19,6 +19,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bbing.DtoModel", "Bbing.Dto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bbing.Config", "Bbing.Config\Bbing.Config.csproj", "{8F871635-B115-444A-9BF4-F28938113D0B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bbing.Domain.Floder", "Bbing.Domain.Floder", "{DE5CBF9A-22AC-460A-94FC-EC33F38FD0D1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bbing.Infrastructure.Floder", "Bbing.Infrastructure.Floder", "{02CB8249-B2FA-4DAA-913D-4B222C7A774A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bbing.Service.Floder", "Bbing.Service.Floder", "{9E58B220-EF9B-4045-BE8F-931B1367A30F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bbing.Web.Floder", "Bbing.Web.Floder", "{709680BD-F6C1-44B3-BDCB-249369131638}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,8 +69,17 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E5C2DB81-4A97-4E5A-ADCF-37E830110E28} = {DE5CBF9A-22AC-460A-94FC-EC33F38FD0D1}
+		{1A83FC37-58C0-4C33-974D-AFA13C804E50} = {02CB8249-B2FA-4DAA-913D-4B222C7A774A}
+		{402B72FA-42F4-498A-9E7A-68AA44895BCA} = {02CB8249-B2FA-4DAA-913D-4B222C7A774A}
+		{93F62693-2C55-4692-BCB6-0A04E13D6778} = {9E58B220-EF9B-4045-BE8F-931B1367A30F}
+		{4A1AB5C5-0783-42AC-A34B-B4FB9AB0A349} = {709680BD-F6C1-44B3-BDCB-249369131638}
+		{B7A0E417-D97A-43C7-8721-34CCCF02031E} = {02CB8249-B2FA-4DAA-913D-4B222C7A774A}
+		{8F871635-B115-444A-9BF4-F28938113D0B} = {02CB8249-B2FA-4DAA-913D-4B222C7A774A}
+	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		VisualSVNWorkingCopyRoot = .
 		SolutionGuid = {FC4EADA9-F1D0-4E8F-8654-82D1C911106E}
+		VisualSVNWorkingCopyRoot = .
 	EndGlobalSection
 EndGlobal
