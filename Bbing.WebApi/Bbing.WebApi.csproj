@@ -214,6 +214,7 @@
     <Compile Include="Handlers\UEditorHandler.ashx.cs">
       <DependentUpon>UEditorHandler.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Models\AutofacIoc.cs" />
     <Compile Include="Models\UEditorModels\Config.cs" />
     <Compile Include="Models\UEditorModels\ConfigHandler.cs" />
     <Compile Include="Models\UEditorModels\CrawlerHandler.cs" />
