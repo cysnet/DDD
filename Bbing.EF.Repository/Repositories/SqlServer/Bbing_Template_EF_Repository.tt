@@ -3,11 +3,11 @@
 //  Copyright © . All Rights Reserved.
 // </copyright>
 
-public class Bbing_Template_Mongo_Repository : CSharpTemplate
+public class Bbing_Template_EF_Repository : CSharpTemplate
 {
     private string _className;
 
-    public Bbing_Template_Mongo_Repository(string className)
+    public Bbing_Template_EF_Repository(string className)
     {
         _className = className;
     }
@@ -23,10 +23,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Bbing.Domain.IRepositories;
 using Bbing.Domain.Model;
+using Bbing.EF.Repository.Repositories.SqlServer;
 
-namespace Bbing.Repository.Repositories.Mongo
+namespace Bbing.EF.Repository.Repositories.SqlServer
 {
-	public partial class <#= _className #>MongoRepository : MongoBaseRepository<<#= _className #>>, I<#= _className #>Repository 
+	public partial class <#= _className #>EFRepository : EFBaseRepository<<#= _className #>>, I<#= _className #>Repository 
 	{
 		
 	}

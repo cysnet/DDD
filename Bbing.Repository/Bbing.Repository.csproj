@@ -65,9 +65,9 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Repositories\Mongo\MongoBaseRepository.cs" />
-    <Compile Include="Repositories\Mongo\t4\PostsRepository.cs" />
-    <Compile Include="Repositories\Mongo\t4\UsersRepository.cs" />
-    <Compile Include="Repositories\Mongo\PostsRepository.cs" />
+    <Compile Include="Repositories\Mongo\PostsMongoRepository.cs" />
+    <Compile Include="Repositories\Mongo\t4\PostsMongoRepository.cs" />
+    <Compile Include="Repositories\Mongo\t4\UsersMongoRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -89,8 +89,8 @@
       <LastGenOutput>Bbing_Template.cs</LastGenOutput>
       <LastOutputs>
 .\Bbing_Template.cs
-.\Mongo\t4\PostsRepository.cs
-.\Mongo\t4\UsersRepository.cs
+.\Mongo\t4\PostsMongoRepository.cs
+.\Mongo\t4\UsersMongoRepository.cs
 </LastOutputs>
     </Content>
     <Content Include="Repositories\Bbing_Template_Mongo_Repository.tt" />

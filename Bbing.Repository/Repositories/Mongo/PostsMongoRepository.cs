@@ -8,7 +8,7 @@ using MongoDB.Driver;
 
 namespace Bbing.Repository.Repositories.Mongo
 {
-    public partial class PostsRepository
+    public partial class PostsMongoRepository
     {
         /// <summary>
         /// 添加评论

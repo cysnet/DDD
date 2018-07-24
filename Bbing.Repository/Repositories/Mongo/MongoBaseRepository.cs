@@ -12,7 +12,7 @@ using MongoDB.Bson;
 
 namespace Bbing.Repository.Repositories.Mongo
 {
-    public class MongoBaseRepository<TEntity> : IRepository<TEntity> where TEntity : AggregateRoot
+    public class MongoBaseRepository<TEntity> : IRepository<TEntity> where TEntity :  AggregateRoot,new()
     {
         public MongoBaseRepository()
         {
@@ -164,7 +164,7 @@ namespace Bbing.Repository.Repositories.Mongo
         /// <param name="PageIndex"></param>
         /// <param name="PageSize"></param>
         /// <returns></returns>
-        public List<TResult> GetPageList<TResult, TKey>(Expression<Func<TEntity, bool>> expression, Expression<Func<TEntity, TResult>> selector, Func<TEntity, TKey>sort, int PageIndex, int PageSize)
+        public List<TResult> GetPageList<TResult, TKey>(Expression<Func<TEntity, bool>> expression, Expression<Func<TEntity, TResult>> selector, Expression<Func<TEntity, TKey>>sort, int PageIndex, int PageSize)
         {
             return Collection.AsQueryable().Where(expression).OrderBy(sort).AsQueryable().Skip((PageIndex - 1) * PageSize).Take(PageSize).Select(selector)
                 .ToList();
@@ -181,11 +181,21 @@ namespace Bbing.Repository.Repositories.Mongo
         /// <param name="PageIndex"></param>
         /// <param name="PageSize"></param>
         /// <returns></returns>
-        public List<TResult> GetPageListDesc<TResult, TKey>(Expression<Func<TEntity, bool>> expression, Expression<Func<TEntity, TResult>> selector, Func<TEntity, TKey> sortDesc, int PageIndex,
+        public List<TResult> GetPageListDesc<TResult, TKey>(Expression<Func<TEntity, bool>> expression, Expression<Func<TEntity, TResult>> selector, Expression<Func<TEntity, TKey>> sortDesc, int PageIndex,
             int PageSize)
         {
             return Collection.AsQueryable().Where(expression).OrderByDescending(sortDesc).AsQueryable().Skip((PageIndex - 1) * PageSize).Take(PageSize).Select(selector)
                 .ToList();
+        }
+
+        public int Update(TEntity entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int Commit()
+        {
+            throw new NotImplementedException();
         }
     }
 }

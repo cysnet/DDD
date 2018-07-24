@@ -13,7 +13,7 @@ using Bbing.Domain.Model;
 
 namespace Bbing.Repository.Repositories.Mongo
 {
-	public partial class UsersRepository : MongoBaseRepository<Users>, IUsersRepository 
+	public partial class PostsMongoRepository : MongoBaseRepository<Posts>, IPostsRepository 
 	{
 		
 	}

@@ -1,10 +1,8 @@
-﻿using Autofac;
-using Autofac.Integration.WebApi;
-using System.Web.Http;
+﻿using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using Bbing.WebApi.Models;
+using Bbing.WebApi.Models.CastleIoc;
 
 namespace Bbing.WebApi
 {
@@ -20,8 +18,12 @@ namespace Bbing.WebApi
 
             GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
 
-            var container = AutofacIoc.Regist();
-            GlobalConfiguration.Configuration.DependencyResolver = new AutofacWebApiDependencyResolver((IContainer)container);
+            //Autofac
+            //var container = AutofacIoc.Regist();
+            //GlobalConfiguration.Configuration.DependencyResolver = new AutofacWebApiDependencyResolver((IContainer)container);
+
+            //Catle
+            GlobalConfiguration.Configuration.DependencyResolver = new Bbing.WebApi.Models.CastleIoc.DependencyResolver(CastleIoc.Regist().Kernel);
         }
 
     }

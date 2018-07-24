@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,5 +36,12 @@ namespace Bbing.Domain.Model
         /// 父评论Id
         /// </summary>
         public string ParentId { get; set; }
+
+        /// <summary>
+        /// 帖子表外键
+        /// </summary>
+        public int Posts_Id { get; set; }
+        [ForeignKey("Posts_Id")]
+        public virtual Posts Posts { get; set; }
     }
 }

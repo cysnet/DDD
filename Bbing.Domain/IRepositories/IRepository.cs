@@ -46,6 +46,14 @@ namespace Bbing.Domain.IRepositories
         int Update(Expression<Func<TEntity, bool>> expression, params KV[] param);
 
         /// <summary>
+        /// 更新
+        /// </summary>
+        /// <param name="expression"></param>
+        /// <param name="param"></param>
+        /// <returns></returns>
+        int Update(TEntity entity);
+
+        /// <summary>
         /// 根据Id查询
         /// </summary>
         /// <param name="id"></param>
@@ -75,12 +83,12 @@ namespace Bbing.Domain.IRepositories
         /// <returns></returns>
         TResult GetOne<TResult>(Expression<Func<TEntity, bool>> expression, Expression<Func<TEntity, TResult>> selector);
 
-        /// <summary>
-        /// 物理删除多个
-        /// </summary>
-        /// <param name="param"></param>
-        /// <returns></returns>
-        int DeleteMany(params KV[] param);
+        ///// <summary>
+        ///// 物理删除多个
+        ///// </summary>
+        ///// <param name="param"></param>
+        ///// <returns></returns>
+        //int DeleteMany(params KV[] param);
 
         /// <summary>
         /// 是否存在
@@ -101,7 +109,7 @@ namespace Bbing.Domain.IRepositories
         /// <param name="PageSize"></param>
         /// <returns></returns>
         List<TResult> GetPageList<TResult, TKey>(Expression<Func<TEntity, bool>> expression,
-            Expression<Func<TEntity, TResult>> selector, Func<TEntity, TKey> sort, int PageIndex, int PageSize);
+            Expression<Func<TEntity, TResult>> selector, Expression<Func<TEntity, TKey>> sort, int PageIndex, int PageSize);
 
         /// <summary>
         /// 倒序分页获取
@@ -115,8 +123,9 @@ namespace Bbing.Domain.IRepositories
         /// <param name="PageSize"></param>
         /// <returns></returns>
         List<TResult> GetPageListDesc<TResult, TKey>(Expression<Func<TEntity, bool>> expression,
-            Expression<Func<TEntity, TResult>> selector, Func<TEntity, TKey> sortDesc, int PageIndex, int PageSize);
+            Expression<Func<TEntity, TResult>> selector, Expression<Func<TEntity, TKey>> sortDesc, int PageIndex, int PageSize);
 
         #endregion
+        int Commit();
     }
 }

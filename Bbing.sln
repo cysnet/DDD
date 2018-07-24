@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bbing.Service.Floder", "Bbi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bbing.Web.Floder", "Bbing.Web.Floder", "{709680BD-F6C1-44B3-BDCB-249369131638}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bbing.EF.Repository", "Bbing.EF.Repository\Bbing.EF.Repository.csproj", "{B8010AD7-F1DD-47DC-B81E-6D5967FE837A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +67,10 @@ Global
 		{8F871635-B115-444A-9BF4-F28938113D0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F871635-B115-444A-9BF4-F28938113D0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F871635-B115-444A-9BF4-F28938113D0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8010AD7-F1DD-47DC-B81E-6D5967FE837A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8010AD7-F1DD-47DC-B81E-6D5967FE837A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8010AD7-F1DD-47DC-B81E-6D5967FE837A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8010AD7-F1DD-47DC-B81E-6D5967FE837A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +83,7 @@ Global
 		{4A1AB5C5-0783-42AC-A34B-B4FB9AB0A349} = {709680BD-F6C1-44B3-BDCB-249369131638}
 		{B7A0E417-D97A-43C7-8721-34CCCF02031E} = {02CB8249-B2FA-4DAA-913D-4B222C7A774A}
 		{8F871635-B115-444A-9BF4-F28938113D0B} = {02CB8249-B2FA-4DAA-913D-4B222C7A774A}
+		{B8010AD7-F1DD-47DC-B81E-6D5967FE837A} = {02CB8249-B2FA-4DAA-913D-4B222C7A774A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FC4EADA9-F1D0-4E8F-8654-82D1C911106E}

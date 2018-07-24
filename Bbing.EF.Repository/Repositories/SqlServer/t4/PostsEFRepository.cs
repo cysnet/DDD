@@ -10,11 +10,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Bbing.Domain.IRepositories;
 using Bbing.Domain.Model;
+using Bbing.EF.Repository.Repositories.SqlServer;
 
-namespace Bbing.Domain.Service
+namespace Bbing.EF.Repository.Repositories.SqlServer
 {
-	public partial interface IPostsService : IBaseService<Posts>
+	public partial class PostsEFRepository : EFBaseRepository<Posts>, IPostsRepository 
 	{
-	     IPostsRepository CurrentRepository { get; set; }
+		
 	}
 }

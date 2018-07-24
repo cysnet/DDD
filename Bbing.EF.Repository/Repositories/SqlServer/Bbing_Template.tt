@@ -9,13 +9,13 @@
 <#@ assembly name="$(ProjectDir)\bin\Debug\Bbing.Domain.dll" #>
 <#@ import namespace="Bbing.Domain.BaseModel" #>
 <#@ include file="T4Toolbox.tt" #>
-<#@ include file="Bbing_Template_Mongo_Repository.tt" #>
+<#@ include file="Bbing_Template_EF_Repository.tt" #>
 <#@ output extension=".cs" #>
 
 <#
     string solutionsPath = Host.ResolveAssemblyReference("$(SolutionDir)");  
     string projectPath = Host.ResolveAssemblyReference("$(ProjectDir)");  
-	string destPath_Repository = Path.Combine(projectPath, "Repositories/Mongo/t4");
+	string destPath_Repository = Path.Combine(projectPath, "Repositories/SqlServer/t4");
 #>
 
 <#
@@ -25,8 +25,8 @@
 		string className = item.Name;
 		if(item.GetInterface("IAggregateRoot") != null && className != "AggregateRoot")
 		{
-			Bbing_Template_Mongo_Repository template = new Bbing_Template_Mongo_Repository(className);
-			string fileName = string.Format(@"{0}\{1}.cs", destPath_Repository, $"{className}MongoRepository");
+			Bbing_Template_EF_Repository template = new Bbing_Template_EF_Repository(className);
+			string fileName = string.Format(@"{0}\{1}.cs", destPath_Repository, $"{className}EFRepository");
 			template.Output.Encoding = Encoding.UTF8;
 			template.RenderToFile(fileName);
 		}

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B8010AD7-F1DD-47DC-B81E-6D5967FE837A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bbing.EF.Repository</RootNamespace>
+    <AssemblyName>Bbing.EF.Repository</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BbingContext.cs" />
+    <Compile Include="EFUnitOfWork.cs" />
+    <Compile Include="Migrations\201807240348219_InitialCreate.cs" />
+    <Compile Include="Migrations\201807240348219_InitialCreate.Designer.cs">
+      <DependentUpon>201807240348219_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807240350356_DelRemarks.cs" />
+    <Compile Include="Migrations\201807240350356_DelRemarks.Designer.cs">
+      <DependentUpon>201807240350356_DelRemarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807240354157_AddRe.cs" />
+    <Compile Include="Migrations\201807240354157_AddRe.Designer.cs">
+      <DependentUpon>201807240354157_AddRe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807240355433_DelRe.cs" />
+    <Compile Include="Migrations\201807240355433_DelRe.Designer.cs">
+      <DependentUpon>201807240355433_DelRe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\SqlServer\Bbing_Template.cs">
+      <DependentUpon>Bbing_Template.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Repositories\SqlServer\EFBaseRepository.cs" />
+    <Compile Include="Repositories\SqlServer\PostsEFRepository.cs" />
+    <Compile Include="Repositories\SqlServer\t4\PostsEFRepository.cs" />
+    <Compile Include="Repositories\SqlServer\t4\UsersEFRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bbing.Domain\Bbing.Domain.csproj">
+      <Project>{E5C2DB81-4A97-4E5A-ADCF-37E830110E28}</Project>
+      <Name>Bbing.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bbing.Infrastructure\Bbing.Infrastructure.csproj">
+      <Project>{402b72fa-42f4-498a-9e7a-68aa44895bca}</Project>
+      <Name>Bbing.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201807240348219_InitialCreate.resx">
+      <DependentUpon>201807240348219_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807240350356_DelRemarks.resx">
+      <DependentUpon>201807240350356_DelRemarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807240354157_AddRe.resx">
+      <DependentUpon>201807240354157_AddRe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807240355433_DelRe.resx">
+      <DependentUpon>201807240355433_DelRe.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Repositories\SqlServer\Bbing_Template.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Bbing_Template.cs</LastGenOutput>
+      <LastOutputs>
+.\Bbing_Template.cs
+.\t4\PostsEFRepository.cs
+.\t4\UsersEFRepository.cs
+</LastOutputs>
+    </Content>
+    <Content Include="Repositories\SqlServer\Bbing_Template_EF_Repository.tt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

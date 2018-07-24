@@ -56,6 +56,18 @@
     <Reference Include="Autofac.Integration.WebApi, Version=4.2.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.WebApi2.4.2.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
     </Reference>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.2.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.4.1.0\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
       <HintPath>..\packages\Swashbuckle.Core.5.6.0\lib\net40\Swashbuckle.Core.dll</HintPath>
@@ -63,6 +75,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -204,6 +217,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\ToolsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Filters\DataValidateAttribute.cs" />
@@ -215,6 +229,12 @@
       <DependentUpon>UEditorHandler.ashx</DependentUpon>
     </Compile>
     <Compile Include="Models\AutofacIoc.cs" />
+    <Compile Include="Models\CastleIoc\CastleIoc.cs" />
+    <Compile Include="Models\CastleIoc\DependencyResolver.cs" />
+    <Compile Include="Models\CastleIoc\DependencyScope.cs" />
+    <Compile Include="Models\CastleIoc\ServiceRepositoryInstaller.cs" />
+    <Compile Include="Models\CastleIoc\ToolInstaller.cs" />
+    <Compile Include="Models\CastleIoc\WebApiInstaller.cs" />
     <Compile Include="Models\UEditorModels\Config.cs" />
     <Compile Include="Models\UEditorModels\ConfigHandler.cs" />
     <Compile Include="Models\UEditorModels\CrawlerHandler.cs" />
@@ -330,6 +350,10 @@
     <ProjectReference Include="..\Bbing.DtoModel\Bbing.DtoModel.csproj">
       <Project>{B7A0E417-D97A-43C7-8721-34CCCF02031E}</Project>
       <Name>Bbing.DtoModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bbing.EF.Repository\Bbing.EF.Repository.csproj">
+      <Project>{b8010ad7-f1dd-47dc-b81e-6d5967fe837a}</Project>
+      <Name>Bbing.EF.Repository</Name>
     </ProjectReference>
     <ProjectReference Include="..\Bbing.Infrastructure\Bbing.Infrastructure.csproj">
       <Project>{402B72FA-42F4-498A-9E7A-68AA44895BCA}</Project>

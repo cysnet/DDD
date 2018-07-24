@@ -10,10 +10,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Bbing.Domain.IRepositories;
 using Bbing.Domain.Model;
+using Bbing.EF.Repository.Repositories.SqlServer;
 
-namespace Bbing.Repository.Repositories.Mongo
+namespace Bbing.EF.Repository.Repositories.SqlServer
 {
-	public partial class PostsRepository : MongoBaseRepository<Posts>, IPostsRepository 
+	public partial class UsersEFRepository : EFBaseRepository<Users>, IUsersRepository 
 	{
 		
 	}

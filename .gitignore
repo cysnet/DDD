@@ -15,3 +15,5 @@ Bbing.WebApi/bin/
 Bbing.WebApi/obj/
 Bbing.WebApi/Pic/
 .vs/
+Bbing.EF.Repository/bin/
+Bbing.EF.Repository/obj/

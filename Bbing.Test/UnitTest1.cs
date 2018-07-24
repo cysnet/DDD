@@ -37,5 +37,17 @@ namespace Bbing.Test
             Htmlstring.Replace(">", "");
             Htmlstring.Replace("/r/n", "");
         }
+
+        [TestMethod]
+        public void TestMethod2()
+        {
+            var a = typeof(IBaseService<Posts>).IsAssignableFrom(typeof(PostsService));
+            var myType = typeof(PostsService);
+            Type myTypeInterface = myType.GetInterface("IBaseService`1");
+            if (myTypeInterface != null)
+            {
+               
+            }
+        }
     }
 }

@@ -65,7 +65,7 @@ namespace Bbing.WebApi.Controllers
             }
             var result = postsService.CurrentRepository.GetPageListDesc(expression, e => new GetPostsModel
             {
-                ObjId=e.ObjId,
+                //ObjId=e.ObjId,
                 Title=e.Title,
                 Introduce=e.Introduce,
                 CreateTime = e.CreateTime,

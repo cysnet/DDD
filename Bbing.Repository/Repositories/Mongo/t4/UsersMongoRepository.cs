@@ -11,10 +11,10 @@ using System.Threading.Tasks;
 using Bbing.Domain.IRepositories;
 using Bbing.Domain.Model;
 
-namespace Bbing.Domain.Service
+namespace Bbing.Repository.Repositories.Mongo
 {
-	public partial interface IPostsService : IBaseService<Posts>
+	public partial class UsersMongoRepository : MongoBaseRepository<Users>, IUsersRepository 
 	{
-	     IPostsRepository CurrentRepository { get; set; }
+		
 	}
 }
